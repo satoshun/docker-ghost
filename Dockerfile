@@ -15,7 +15,7 @@ RUN \
   rm -f ghost-latest.zip && \
   cd /ghost && \
   npm install --production && \
-  sed 's/127.0.0.1/0.0.0.0/' /ghost/config.example.js > /ghost/config.js && \
+  wget https://raw.githubusercontent.com/satoshun/my_setting/master/dotfiles/etc/ghost/config.js -O /ghost/config.js && \
   useradd ghost --home /ghost
 
 # Add files.
