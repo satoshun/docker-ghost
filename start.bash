@@ -26,7 +26,7 @@ if [[ -f "$OVERRIDE/$CONFIG" ]]; then
   ln -s "$OVERRIDE/$CONFIG" "$CONFIG"
 fi
 
-sed -i "s/aaaaa/$MYSQL_PORT_3306_TCP_ADDR/" $CONFIG
+sed -i "s/aaaaa/db/" $CONFIG
 
 # Symlink themes.
 if [[ -d "$OVERRIDE/$THEMES" ]]; then
