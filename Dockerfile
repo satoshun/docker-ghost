@@ -15,7 +15,7 @@ RUN \
   rm -f ghost-latest.zip && \
   cd /ghost && \
   npm install --production && \
-  wget https://raw.githubusercontent.com/satoshun/sandbox/master/fig/blog/config.js -O /ghost/config.js && \
+  wget https://raw.githubusercontent.com/satoshun/docker-ghost/master/config.js -O /ghost/config.js && \
   useradd ghost --home /ghost
 
 # Add files.
