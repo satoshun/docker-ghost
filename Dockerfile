@@ -11,8 +11,9 @@ FROM dockerfile/nodejs
 RUN \
   cd /tmp && \
   wget https://github.com/satoshun/Ghost/archive/stable.zip && \
-  unzip stable.zip -d /ghost && \
-  rm -f stable.zip && \
+  unzip stable.zip -d stable && \
+  mv stable/Ghost-stable /ghost && \
+  rm -f stable.zip stable && \
   cd /ghost && \
   npm install -g grunt-cli && \
   npm install && \
