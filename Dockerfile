@@ -10,11 +10,14 @@ FROM dockerfile/nodejs
 # Install Ghost
 RUN \
   cd /tmp && \
-  wget https://ghost.org/zip/ghost-latest.zip && \
-  unzip ghost-latest.zip -d /ghost && \
-  rm -f ghost-latest.zip && \
+  wget https://github.com/satoshun/Ghost/archive/stable.zip && \
+  unzip stable.zip -d /ghost && \
+  rm -f stable.zip && \
   cd /ghost && \
-  npm install --production && \
+  npm install -g grunt-cli && \
+  npm install && \
+  grunt init && \
+  grunt prod && \
   wget https://raw.githubusercontent.com/satoshun/docker-ghost/master/config.js -O /ghost/config.js && \
   useradd ghost --home /ghost
 
