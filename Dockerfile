@@ -11,7 +11,10 @@ FROM dockerfile/nodejs
 RUN \
   cd /tmp && \
   wget https://github.com/satoshun/Ghost/archive/stable.zip && \
+  wget https://github.com/satoshun/Casper/archive/master.zip && \
   unzip stable.zip -d stable && \
+  unzip master.zip -d master && \
+  mv master/* stable/Ghost-stable/content/themes/my_casper/ && \
   mv stable/Ghost-stable /ghost && \
   rm -rf stable.zip stable && \
   cd /ghost && \
