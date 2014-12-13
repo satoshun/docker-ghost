@@ -14,7 +14,7 @@ RUN \
   wget https://github.com/satoshun/Casper/archive/master.zip && \
   unzip stable.zip -d stable && \
   unzip master.zip -d master && \
-  mv master/* stable/Ghost-stable/content/themes/my_casper/ && \
+  mv master/Casper-master/* stable/Ghost-stable/content/themes/my_casper/ && \
   mv stable/Ghost-stable /ghost && \
   rm -rf stable.zip stable && \
   cd /ghost && \
